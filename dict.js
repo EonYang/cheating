@@ -1,7 +1,9 @@
 var pinyinText;
 
-var showPinyin = (hanzi) => {
+var showPinyin = () => {
+  let input = document.getElementById('hanzi'); 
+  let hanzi = input.value;
   let pinyinTemp = cjst.chineseToPinyin(hanzi).toString();
   let pinyinText = removeTone(pinyinTemp);
-  let result = document.getElementById('showPinyin').innerHTML = pinyinText;
+  document.getElementById('showPinyin').innerHTML = pinyinText;
 };
