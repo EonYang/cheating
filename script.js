@@ -1,6 +1,6 @@
 var quesion, answer;
 
-var _set = (ques) => {
+var start = (ques) => {
   // let i = Math.floor(Math.random()*qa.length);
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
@@ -18,4 +18,4 @@ var showResult = () => {
   // console.log(text);
 };
 
-_set(getQuestion(level2));
+start(getQuestion(level2));
