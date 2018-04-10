@@ -16,19 +16,19 @@ However, in this game, let's ignore the tone symble on top of `tiān`; which mea
 
 There are 2 players in this game.
 
-`The examiner` is the one who will take the test with this website.
+`The test taker` is the one who will take the test with this website.
 
-`The helper` is the one who will find out the answer and tell the examiner.
+`The helper` is the one who will find out the answer and tell the test taker.
 
-To score, the examiner must type-in the correct Pinyin of the shown Chinese character. 
+To score, the test taker must type-in the correct Pinyin of the shown Chinese character. 
 
-In order to do so, `the examiner` must make a phone call to tell `the helper` how the Chinese character looks like, so the helper can find out the Pinyin of the character by a hand writing dictionary.
+In order to do so, `the test taker` must make a phone call to tell `the helper` how the Chinese character looks like, so the helper can find out the Pinyin of the character by a hand writing dictionary.
 
 #### Step by Step
 
-1. `The examiner` sees a Chinese Character on this website.
+1. `The test taker` sees a Chinese Character on this website.
 2. `The helper` has a phone in hand with Chinese Hand Writing input method installed.
-3. `The examiner` describes how the Chinese Character looks like verbally.
+3. `The test taker` describes how the Chinese Character looks like verbally.
 4. `The helper` tries to input the Character in Google by hand writing.
 5. Once inputed, Google will tell the Pinyin of the character `like we said, ignore the tone symble`.
-6. `The examiner` types in the Pinyin, and scores.
+6. `The test taker` types in the Pinyin, and scores.
