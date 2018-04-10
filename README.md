@@ -1,18 +1,26 @@
-# My cool website
+## Chinese Pinyin Test
 
-This file describes your project to the community. What's your cool website about? What makes it special?
+You are in a Chinese Pinyin examination!
 
-ヽ(๏∀๏ )ﾉ
+Your friend is trying to help you cheating in this examination, and he/she only has Google translate and a phone!
 
-## ← index.html
+#### What is Pinyin ?
 
-Where you'll write the content of your website. 
+Pinyin is the Chinese phonetic system which comprise by English letters.
 
-## ← styles.css
+For instance, the Pinyin of `天` is `tiān`;
 
-CSS files add styling rules to your content
+However, in this game, let's ignore the tone symble on top of `tiān`; which means you can score with type in `tian`;
 
-## ← script.js
+## How To Play
 
-If you're feeling fancy you can add interactivity to your site with Javascript
+To score, the examiner must type in the right Pinyin of the shown Chinese character.
 
+The examiner has a phone to tell the helper how the Chinese character looks like, and the helper has a hand writing dictionary to find out the Pinyin of the character.
+
+1. The examiner, player 1, sees a Chinese Character,
+2. The helper, player 2, has a phone with Chinese Hand Writing input method installed.
+3. The examiner describes how the Chinese Character looks like verbally.
+4. The helper try to input the Character in google by hand writing.
+5. Once inputed, google will tell the Pinyin of the character.
+6. The examiner type in the Pinyin, and score.

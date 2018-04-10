@@ -20,4 +20,4 @@ var showResult = () => {
   // console.log(text);
 };
 
-_set('天');
+_set(getQuestion(level2));
