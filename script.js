@@ -39,10 +39,25 @@ var start = () => {
                }
 }
 
-var dropDownSetLevel = () => {
-  let dropD = 
-  level = document.getElementById("dropDownSetLevel").options[.selectedIndex].value;
-  start();
-}
+// var dropDownSetLevel = () => {
+//   let dropD = document.getElementById("dropDownSetLevel");
+//   level = $("").value;
+//   start();
+// }
 
+.change(function() {
+    var str = "";
+    $( "select option:selected" ).each(function() {
+      str += $( this ).text() + " ";
+    });
+    $( "div" ).text( str );
+  })
+  .trigger( "change" );
+
+$("#level").change(() => {
+    $("#level option:selected").each(function(){
+      level = 
+    })
+}
+)
 window.onload = start;
