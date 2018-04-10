@@ -1,7 +1,7 @@
 var answer;
 
 var newQuestion = (ques) => {
-  document.getElementById('showLevel').innerHTML = `LEVEL : ${level}`;
+  document.getElementById('showLevel').innerHTML = `LEVEL : ${levelManager.currentLevel}`;
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
   answer = removeTone(answerTemp);
@@ -9,17 +9,26 @@ var newQuestion = (ques) => {
 
 var showResult = () => {
   let input = document.getElementById('input'); 
-  let text = input.value == answer ? 'Correct!':'Wrong';
-  let result = document.getElementById('result').innerHTML = text;
+  let isCorrect = input.value == answer ? true : false;
+  let text = isCorrect? 'Correct!':'Wrong';
+  document.getElementById('result').innerHTML = text;
+  if (isCorrect){
+  document.getElementById('result').innerHTML = ' ';
+    input.value = '';
+    levelManager.getScore();
+  }
+  else {
   setTimeout(()=>{
     document.getElementById('result').innerHTML = ' ';
     input.value = '';
   },3000);
+  }
+  
 };
 
 
 var start = () => {
-  switch(level){
+  switch(levelManager.currentLevel){
     case 1:
       newQuestion(getHanzi(questionRepo.level1));
       break;
@@ -46,6 +55,5 @@ dropD.onchange = () => {
 };
 
 
-level = 1;
-dropD.value = level;
+dropD.value = levelManager.currentLevel;
 window.onload = start;
