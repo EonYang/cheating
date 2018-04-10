@@ -1,6 +1,7 @@
 var answer;
 var newQuestion = (ques) => {
   document.getElementById('showLevel').innerHTML = `LEVEL : ${levelManager.currentLevel}`;
+  document.getElementById('showScore').innerHTML = `SCORE : ${levelManager.score}`;
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
   answer = removeTone(answerTemp);
