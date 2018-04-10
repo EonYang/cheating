@@ -2,28 +2,36 @@ body {
   font-family: "helvetica";
   background-color: #fff;
 }
-
 #main{
-    width: 640px;
-    margin: auto;
+  width: 640px;
+  margin: auto;
 }
-
 #main_game {
-
-
 }
-
 #game_left{
   width: 400px;
-    display: inline-block;
+  height: 400px;
+  display: inline-block;
+  background-image: url("https://cdn.glitch.com/8570088e-b3ca-4685-b01c-b64a060f863e%2FhanziBg.png?1523404029070");
 }
-
 #game_right{
   width: 230px;
-    display: inline-block;
+  display: inline-block;
+}
+#input{
+  height: 48px;
+  width: 230px;
+}
+#submitBtn{
+height: 48px;
+  width: 128px;
 }
 
 #question {
-  font-size:128px;
+  font-size: 320px;
+  text-align: center;
 }
-
+#dropDownSetLevel{
+  width:240px;
+  display: inline-block;
+}
