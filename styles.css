@@ -1,3 +1,8 @@
-h1 {
-  color: fuchsia;
+body {
+  font-family: "helvetica";
+  background-color: #fff;
+}
+
+#question {
+  font-size:64px;
 }
