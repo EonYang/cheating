@@ -1,4 +1,9 @@
 var answer;
+var input = document.getElementById("input");
+var submitBtn = document.getElementById("submitBtn");
+
+
+
 var newQuestion = (ques) => {
   document.getElementById('showLevel').innerHTML = `LEVEL : ${levelManager.currentLevel}`;
   document.getElementById('showScore').innerHTML = `SCORE : ${levelManager.score}`;
@@ -7,7 +12,6 @@ var newQuestion = (ques) => {
   answer = removeTone(answerTemp);
 }
 var showResult = () => {
-  let input = document.getElementById('input'); 
   let isCorrect = input.value == answer ? true : false;
   let text = isCorrect? 'Correct!':'Wrong';
   document.getElementById('result').innerHTML = text;
@@ -43,9 +47,18 @@ var start = () => {
       break;
                                   }
 }
+
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        submitBtn.click();
+    }
+});
+
+
 var dropD = document.getElementById("dropDownSetLevel");
 dropD.onchange = () => {
-  level = +dropD.value;
+  levelManager.currentLevel = +dropD.value;
   start();
 };
 dropD.value = levelManager.currentLevel;
