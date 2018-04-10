@@ -1,5 +1,3 @@
-
-
 var quesion, answer;
 
 var _set = (ques) => {
