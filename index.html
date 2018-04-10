@@ -16,37 +16,56 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <div id = 'main_game'>
-      <div>
-        <p id = 'showLevel'><p>
-        <p id = 'showScore'><p>
+    <div id = 'main'>
+      <div id = 'header'>
+        <h1>
+          CHINESE
+        </h1>
+        <h1>
+          PINYIN TEST
+        </h1>
       </div>
-      <h1 id = question></h1>
-      <input type = 'text' id="input" placeholder="type the pinyin here">
-      <button id = 'submitBtn' onclick = showResult() >Submit</button>
-      <br>
-      <br>
-      <p id = 'result'><p>
-      <br>
-      <br>
-      <br>
-      <button id = 'skipBtn' onclick = 'levelManager.skipCharacter()' >Skip This Word</button>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <p>Jump to Level : <p><select id="dropDownSetLevel">
-      <option id="level1" value="1">level1</option>
-      <option id="level2" value="2">level2</option>
-      <option id="level3" value="3">level3</option>
-      <option id="level4" value="4">level4</option>
-      <option id="level5" value="5">level5</option>    
-      </select>
+      <hr>
+      <div id = 'main_game'>
+        <div id = 'game_left'>
+          <h1 id = question></h1>
+        </div>
+        <div id = 'game_right'>
+          <input type = 'text' id="input" placeholder="type the pinyin here">
+          <button id = 'submitBtn' onclick = showResult() >Submit</button>
+          <p id = 'result'><p>
+          <p id = 'showLevel'><p>
+          <p id = 'showScore'><p>
+        </div>
+      </div>
+      <div id = 'bottom'>
+        <button id = 'skipBtn' onclick = 'levelManager.skipCharacter()' >Skip This Word</button>
+      </div>
+      <hr>
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Jump to Level : <p><select id="dropDownSetLevel">
+        <option id="level1" value="1">level1</option>
+        <option id="level2" value="2">level2</option>
+        <option id="level3" value="3">level3</option>
+        <option id="level4" value="4">level4</option>
+        <option id="level5" value="5">level5</option>    
+        </select>
+      </div>
     </div>
   </body>
 </html>
