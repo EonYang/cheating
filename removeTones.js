@@ -27,8 +27,10 @@ var tones = [
   ['ň','n'],
   ['','m']
 ]
+
 var removeTone = (pinyin) => {
+  let result;
   for (let i = 0; i < tones.length; i++){
-    pinyin.replace(tones[i][0],tones[i][1]);}
+    result = pinyin.replace(tones[i][0],tones[i][1]);}
   return pinyin;
 }

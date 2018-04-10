@@ -4,13 +4,14 @@ var _set = (ques) => {
   // let i = Math.floor(Math.random()*qa.length);
   document.getElementById('question').innerHTML = ques;
   answer = cjst.chineseToPinyin(ques);
+  answer = answer.toString();
+  answer = removeTone(answer);
 }
 
 var showResult = () => {
-  var input = document.getElementById('input');
-  
-  var text = input.value == answer ? 'Correct!':'Wrong';
-  var result = document.getElementById('result').innerHTML = text;
+  let input = document.getElementById('input'); 
+  let text = input.value == answer ? 'Correct!':'Wrong';
+  let result = document.getElementById('result').innerHTML = text;
   setTimeout(()=>{
     document.getElementById('result').innerHTML = ' ';
     input.value = '';
