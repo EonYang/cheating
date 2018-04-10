@@ -1,11 +1,12 @@
-var quesion, answer;
+var answer;
+
 var newQuestion = (ques) => {
-  // let i = Math.floor(Math.random()*qa.length);
   document.getElementById('showLevel').innerHTML = `LEVEL : ${level}`;
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
   answer = removeTone(answerTemp);
 }
+
 var showResult = () => {
   let input = document.getElementById('input'); 
   let text = input.value == answer ? 'Correct!':'Wrong';
@@ -14,7 +15,6 @@ var showResult = () => {
     document.getElementById('result').innerHTML = ' ';
     input.value = '';
   },3000);
-  // console.log(text);
 };
 
 var start = () => {
@@ -37,4 +37,4 @@ var start = () => {
                }
 }
 
-start();
+window.onload = start;
