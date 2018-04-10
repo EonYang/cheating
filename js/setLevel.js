@@ -1,45 +1,29 @@
-var level = 3;
-
 var setLevel = (num) => {
   level = num;
   start();
 }
-
 var levelMan = {
+  level : 1,
   score : 0,
-  ScoreGetsInLevel : {
-    1 : 5,
-    2 : 10,
-    3 : 15,
-    4 : 15,
-    5 : 15,
-    6 : 15,
-
+  corrects : 0,
+  getScore : ()=>{
+    this.score += level*5;
   },
-  scoreToLevel : {
-    0 : 1,
-    5 : 2,
-    25 : 3,
-    70 : 4,
-    100 : 5,
-    120 : 6,
+  goToNextLevel : (corrects)=>{
+    switch(corrects){
+      case (corrects >= 3):
+        this.level = 3 + Math.floor(this.corrects/3);
+        break;
+      case (corrects >= 1):
+        this.level = 2;
+        break;
+      case (corrects == 0):
+        this.level = 1;
+        break;
+                   }
   },
-  addScore : (level)=>{},
-  nextLevel: (score)=>{
-    switch(score){
-                
-      case 0:
-        level = 1;
-        break;
-        
-        case 30:
-        level = 1;
-        break;
-        
-                }
+  setLevel : (num) => {
+  this.level = num;
+  start();
 }
-  
-
-
-
 };
