@@ -1,27 +1,30 @@
 var levelManager = {
-  currentLevel : 1,
-  score : 0,
-  corrects : 0,
-  _goToNextLevel : () => {
-    switch(true){
-      case (this.corrects >= 3):
-        this.currentLevel = 3 + Math.floor(this.corrects/3);
+  currentLevel: 1,
+  score: 0,
+  corrects: 0,
+  _goToNextLevel: () => {
+    switch (true) {
+      case(levelManager.corrects >= 3):
+        levelManager.currentLevel = 2 + Math.floor(levelManager.corrects / 3);
+        start();
         break;
-      case (this.corrects >= 1):
-        this.currentLevel = 2;
+      case(levelManager.corrects >= 1):
+        levelManager.currentLevel = 2;
+        start();
         break;
-      case (this.corrects == 0):
-        this.currentLevel = 1;
+      case(levelManager.corrects == 0):
+        levelManager.currentLevel = 1;
+        start();
         break;
-                   }
+    }
   },
-  getScore : ()=>{
-    this.score += this.currentLevel * 5;
-    this.corrects += 1;
-    this._goToNextLevel();
+  getScore: () => {
+    levelManager.score += levelManager.currentLevel * 5;
+    levelManager.corrects += 1;
+    levelManager._goToNextLevel();
   },
-  setLevel : (num) => {
-  this.currentLevellevel = num;
-  start();
-}
+  setLevel: (num) => {
+    levelManager.currentLevellevel = num;
+    start();
+  }
 };
