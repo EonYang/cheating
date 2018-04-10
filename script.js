@@ -17,8 +17,10 @@ var showResult = () => {
   },3000);
 };
 
+
 var start = () => {
   switch(level){
+      // document.getElementById("1")
     case 1:
       newQuestion(getHanzi(level1));
       break;
@@ -35,6 +37,12 @@ var start = () => {
       newQuestion(getHanzi(level5));
       break;
                }
+}
+
+var dropDownSetLevel = () => {
+  let dropD = 
+  level = document.getElementById("dropDownSetLevel").options[.selectedIndex].value;
+  start();
 }
 
 window.onload = start;
