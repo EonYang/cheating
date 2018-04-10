@@ -1,6 +1,7 @@
 var quesion, answer;
-var initLevel = (ques) => {
+var newQuestion = (ques) => {
   // let i = Math.floor(Math.random()*qa.length);
+  document.getElementById('showLevel').innerHTML = `LEVEL : ${level}`;
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
   answer = removeTone(answerTemp);
@@ -16,24 +17,24 @@ var showResult = () => {
   // console.log(text);
 };
 
-var start = (number) => {
-  switch(number){
+var start = () => {
+  switch(level){
     case 1:
-      initLevel(getQuestion(level1));
+      newQuestion(getHanzi(level1));
       break;
     case 2:
-      initLevel(getQuestion(level2));
+      newQuestion(getHanzi(level2));
       break;
     case 3:
-      initLevel(getQuestion(level3));
+      newQuestion(getHanzi(level3));
       break;
     case 4:
-      initLevel(getQuestion(level4));
+      newQuestion(getHanzi(level4));
       break;
     case 5:
-      initLevel(getQuestion(level5));
+      newQuestion(getHanzi(level5));
       break;
                }
 }
 
-start(3);
+start();
