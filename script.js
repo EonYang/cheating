@@ -20,7 +20,6 @@ var showResult = () => {
 
 var start = () => {
   switch(level){
-      // document.getElementById("1")
     case 1:
       newQuestion(getHanzi(level1));
       break;
@@ -39,25 +38,26 @@ var start = () => {
                }
 }
 
-// var dropDownSetLevel = () => {
-//   let dropD = document.getElementById("dropDownSetLevel");
-//   level = $("").value;
-//   start();
+var dropD = document.getElementById("dropDownSetLevel");
+
+dropD.onchange = () => {
+  level = dropD.value;
+  start();
+};
+
+// .change(function() {
+//     var str = "";
+//     $( "select option:selected" ).each(function() {
+//       str += $( this ).text() + " ";
+//     });
+//     $( "div" ).text( str );
+//   })
+//   .trigger( "change" );
+
+// $("#level").change(() => {
+//     $("#level option:selected").each(function(){
+//       level = 
+//     })
 // }
-
-.change(function() {
-    var str = "";
-    $( "select option:selected" ).each(function() {
-      str += $( this ).text() + " ";
-    });
-    $( "div" ).text( str );
-  })
-  .trigger( "change" );
-
-$("#level").change(() => {
-    $("#level option:selected").each(function(){
-      level = 
-    })
-}
-)
+// )
 window.onload = start;
