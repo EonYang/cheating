@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script src="./lib/cjst.js" defer></script>
     <script src="./js/removeTones.js" defer></script>
     <script src="./js/setLevel.js" defer></script>
@@ -19,16 +21,25 @@
     <input type = 'text' id="input" placeholder="type the pinyin here">
     <button onclick = showResult() >Submit</button>
 
-    <div class="dropdown" >
-        <button class="dropbtn">setLevel</button>
-        <div class="dropdown-content" >
-             <a href="#">Level 1</a>
-             <a href="#">Level2</a>
-             <a href="#">Level 3</a>
-             <a href="#">Level 2</a>
-             <a href="#">Level 3</a>
-  </div>
-</div>
+    <button class="btn btn-default dropdown-toggle" type="button" id="level" data-toggle="dropdown">Level
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li id="Level1"><a role="menuitem" tabindex="-1" href="#">Level1</a></li>
+      <li id="Level2"><a role="menuitem" tabindex="-1" href="#">Level2</a></li>
+      <li id="Level3"><a role="menuitem" tabindex="-1" href="#">Level3</a></li>
+      <li id="Level4"><a role="menuitem" tabindex="-1" href="#">Level5</a></li>
+      <li id="Level5"><a role="menuitem" tabindex="-1" href="#">Level5</a></li>
+    </ul>
+    
     <p id = 'result'><p>
+    
+    
+<select onchange="setLevel(this.value)">
+
+    <option value="1">level 1</option>
+    <option value="2">level 2</option>
+    <option value="3">level 3</option>
+
+</select>
   </body>
 </html>
