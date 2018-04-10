@@ -21,19 +21,19 @@ var showResult = () => {
 var start = () => {
   switch(level){
     case 1:
-      newQuestion(getHanzi(level1));
+      newQuestion(getHanzi(questionRepo.level1));
       break;
     case 2:
-      newQuestion(getHanzi(level2));
+      newQuestion(getHanzi(questionRepo.level2));
       break;
     case 3:
-      newQuestion(getHanzi(level3));
+      newQuestion(getHanzi(questionRepo.level3));
       break;
     case 4:
-      newQuestion(getHanzi(level4));
+      newQuestion(getHanzi(questionRepo.level4));
       break;
     case 5:
-      newQuestion(getHanzi(level5));
+      newQuestion(getHanzi(questionRepo.level5));
       break;
                }
 }
@@ -41,23 +41,11 @@ var start = () => {
 var dropD = document.getElementById("dropDownSetLevel");
 
 dropD.onchange = () => {
-  level = dropD.value;
+  level = +dropD.value;
   start();
 };
 
-// .change(function() {
-//     var str = "";
-//     $( "select option:selected" ).each(function() {
-//       str += $( this ).text() + " ";
-//     });
-//     $( "div" ).text( str );
-//   })
-//   .trigger( "change" );
 
-// $("#level").change(() => {
-//     $("#level option:selected").each(function(){
-//       level = 
-//     })
-// }
-// )
+level = 1;
+dropD.value = level;
 window.onload = start;
