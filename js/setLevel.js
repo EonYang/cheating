@@ -23,6 +23,9 @@ var levelManager = {
     levelManager.corrects += 1;
     levelManager._goToNextLevel();
   },
+  skipCharacter: () => {
+    start();
+  },
   setLevel: (num) => {
     levelManager.currentLevellevel = num;
     start();
