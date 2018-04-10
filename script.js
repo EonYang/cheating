@@ -1,12 +1,10 @@
 var quesion, answer;
-
-var start = (ques) => {
+var initLevel = (ques) => {
   // let i = Math.floor(Math.random()*qa.length);
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
   answer = removeTone(answerTemp);
 }
-
 var showResult = () => {
   let input = document.getElementById('input'); 
   let text = input.value == answer ? 'Correct!':'Wrong';
@@ -18,4 +16,24 @@ var showResult = () => {
   // console.log(text);
 };
 
-start(getQuestion(level2));
+var start = (number) => {
+  switch(number){
+    case 1:
+      initLevel(getQuestion(level1));
+      break;
+    case 2:
+      initLevel(getQuestion(level2));
+      break;
+    case 3:
+      initLevel(getQuestion(level3));
+      break;
+    case 4:
+      initLevel(getQuestion(level4));
+      break;
+    case 5:
+      initLevel(getQuestion(level5));
+      break;
+               }
+}
+
+start(3);
