@@ -31,6 +31,8 @@ var tones = [
 var removeTone = (pinyin) => {
   let result;
   for (let i = 0; i < tones.length; i++){
-    result = pinyin.replace(tones[i][0],tones[i][1]);}
-  return pinyin;
+    result = pinyin.replace(tones[i][0], tones[i][1]);
+    console.log(result);
+  }
+  return result;
 }

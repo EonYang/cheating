@@ -3,9 +3,8 @@ var quesion, answer;
 var _set = (ques) => {
   // let i = Math.floor(Math.random()*qa.length);
   document.getElementById('question').innerHTML = ques;
-  answer = cjst.chineseToPinyin(ques);
-  answer = answer.toString();
-  answer = removeTone(answer);
+  let answerTemp = cjst.chineseToPinyin(ques).toString();
+  answer = removeTone(answerTemp);
 }
 
 var showResult = () => {
