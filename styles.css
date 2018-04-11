@@ -3,10 +3,11 @@ body {
   background-color: '#fff';
 }
 #main{
-  width: 640px;
+  max-width: 640px;
   margin: auto;
 }
 #main_game {
+  width:100%;
 }
 #game_left{
   width: 400px;
@@ -15,7 +16,7 @@ body {
   background-image: url("https://cdn.glitch.com/8570088e-b3ca-4685-b01c-b64a060f863e%2FhanziBg.png?1523404029070");
 }
 #game_right{
-      position: fixed;
+  float: right;
   margin-left: 16px;
   width: 220px;
   display: inline-block;
