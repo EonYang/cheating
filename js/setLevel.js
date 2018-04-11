@@ -16,7 +16,7 @@ var levelManager = {
         levelManager.currentLevel = 1;
         start();
         break;
-    }
+                }
   },
   getScore: () => {
     levelManager.score += levelManager.currentLevel * 5;
