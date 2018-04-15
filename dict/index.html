@@ -5,15 +5,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="./lib/cjst.js" defer></script>
-    <script src="./js/removeTones.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../lib/cjst.js" defer></script>
+    <script src="../js/removeTones.js" defer></script>
     <script src="/dict.js" defer></script>
   </head>
   <body>
     <h1>This is a DICTIONARY</h1>
+	<div>
     <input type = 'text' id="hanzi" placeholder="Write the Chinese character here">
-    <button onclick = showPinyin() >Submit</button>
-    <p id = 'showPinyin'> <p>
+    <button onclick = 'showPinyin()' >Submit</button>
+	</div>
+	<p id = 'showPinyin'> </p>
   </body>
 </html>

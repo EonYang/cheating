@@ -8,7 +8,7 @@ var newQuestion = (ques) => {
   document.getElementById('question').innerHTML = ques;
   let answerTemp = cjst.chineseToPinyin(ques).toString();
   answer = removeTone(answerTemp);
-}
+};
 
 var showResult = () => {
   let isCorrect = input.value == answer ? true : false;
@@ -18,7 +18,7 @@ var showResult = () => {
     setTimeout(()=> {
       document.getElementById('result').innerHTML = ' ';
       input.value = '';
-      levelManager.getScore();}, 1000)
+      levelManager.getScore();}, 1000);
   }
   else {
     setTimeout(()=>{
@@ -49,7 +49,7 @@ var start = () => {
       newQuestion(getHanzi(questionRepo.level6));
       break;
                                   }
-}
+};
 
 // press enter to submit
 input.addEventListener("keyup", function(event) {

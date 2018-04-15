@@ -21,7 +21,7 @@ h1.title{
   width: 400px;
   height: 400px;
   display: inline-block;
-  background-image: url("https://cdn.glitch.com/8570088e-b3ca-4685-b01c-b64a060f863e%2FhanziBg.png?1523404029070");
+  background-image: url("../images/hanziBg.png");
 }
 #game_right{
   float: right;
@@ -31,6 +31,10 @@ h1.title{
 }
 #showLevel, #showScore, #result{
   font-size: 32px;
+}
+#result{
+	display: inline-block;
+	float:right;
 }
 #input{
   padding: 2px 12px;
