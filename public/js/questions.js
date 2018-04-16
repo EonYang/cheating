@@ -14,7 +14,7 @@ var questionRepo = {
 外未仙写兄玄训央业叶仪仡议印永用由右幼玉匝仄札轧乍占
 仗召正汁只主仔左`,
   level6 : `阤匜氹刍处匆犰讱矛卮驭夗孕戋讯疋务包必边冬戹发伋厉仞甩讬戊阢礼`
-}
+};
 
 var getHanzi = (questionRepo_level) => {
   let questions = questionRepo_level.split('');
