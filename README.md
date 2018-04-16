@@ -26,8 +26,8 @@ In order to do so, `the test taker` must make a phone call to tell `the helper` 
 
 #### Step by Step
 
-1. `The test taker` sees a Chinese Character on this website.
-2. `The helper` has a phone in hand with Chinese Hand Writing input method installed.
+1. `The test taker` visits this website, and sees a Chinese Character on this website.
+2. `The helper` grabs a phone in hand, launches Google Translate app and switches the keyboard to Chinese Hand Writing input.
 3. `The test taker` describes how the Chinese Character looks like verbally.
 4. `The helper` tries to input the Character in Google by hand writing.
 5. Once inputed, Google will tell the Pinyin of the character `like we said, ignore the tone symble`.
