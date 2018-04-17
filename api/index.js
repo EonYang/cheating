@@ -12,6 +12,7 @@ router.get('/toEn', (req, res) => {
     translate
         .translate(text, target)
         .then(results => {
+            console.log(results[1].data.translations);
             let translations = results[0];
             console.log(translations);
             res.send(translations);
