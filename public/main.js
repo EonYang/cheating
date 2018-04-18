@@ -31,23 +31,23 @@ var showResult = () => {
 };
 
 var start = () => {
-    switch (levelManager.currentLevel) {
-        case 1:
+    switch (true) {
+        case (levelManager.currentLevel == 1 || levelManager.currentLevel < 1):
             questionChar = getHanzi(questionRepo.level1);
             break;
-        case 2:
+        case (levelManager.currentLevel == 2):
             questionChar = getHanzi(questionRepo.level2);
             break;
-        case 3:
+        case (levelManager.currentLevel == 3):
             questionChar = getHanzi(questionRepo.level3);
             break;
-        case 4:
+        case (levelManager.currentLevel == 4):
             questionChar = getHanzi(questionRepo.level4);
             break;
-        case 5:
+        case (levelManager.currentLevel == 5):
             questionChar = getHanzi(questionRepo.level5);
             break;
-        case 6:
+		case (levelManager.currentLevel == 6 || levelManager.currentLevel > 6):
             questionChar = getHanzi(questionRepo.level6);
             break;
     }

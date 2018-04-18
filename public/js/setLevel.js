@@ -2,8 +2,13 @@ var levelManager = {
   currentLevel: 1,
   score: 0,
   corrects: 0,
+  _youWin: () => {
+alert(`Congrats! You passed the exam! \n Refresh to replay.`);
+  },
   _goToNextLevel: () => {
     switch (true) {
+	case(levelManager.corrects >= 20):
+		levelManager._youWin();
       case(levelManager.corrects >= 3):
         levelManager.currentLevel = 2 + Math.floor(levelManager.corrects / 3);
         start();
