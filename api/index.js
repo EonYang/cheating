@@ -2,7 +2,14 @@ const express = require('express');
 const router = express.Router();
 
 const Translate = require('@google-cloud/translate');
-const translate = new Translate();
+const projectId = 'translate-201203';
+
+// Instantiates a client
+const translate = new Translate({
+    projectId: projectId,
+    keyFilename: 'gcloud-key.json'
+});
+
 
 router.get('/toEn', (req, res) => {
     let text = req.query.char;
