@@ -7,7 +7,7 @@ const projectId = 'translate-201203';
 // Instantiates a client
 const translate = new Translate({
     projectId: projectId,
-    keyFilename: 'gcloud-key.json'
+    keyFilename: __dirname +  '/../gcloud-key.json'
 });
 
 
